@@ -42,4 +42,8 @@ Example: stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 10s
 ````
 
 ## Docker images;
-The autobuild based on this repository can be found over [here](https://hub.docker.com/r/containerstack/alpine-stress/).
+The Docker Hub Auto Build is based on this repository can be found [here](https://hub.docker.com/r/containerstack/alpine-stress/).
+
+### Alpine source image;
+This container image is based on the containerstack/alpine image (AMD64).
+The Docker Hub Auto Build of this repo can be found [here](https://hub.docker.com/r/containerstack/alpine/), and the GitHub repo can be found [here](https://github.com/containerstack/docker-alpine). 
