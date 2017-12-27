@@ -9,8 +9,7 @@ Stress is a deliberately simple workload generator for POSIX systems. It imposes
 $ docker run -ti --rm containerstack/alpine-stress \
     stress \
     --cpu 2 \
-    --timeout 60s \
-    --verbose
+    --timeout 60s
 ````
 
 In this example we are running a CPU stress test over 2 cores for 60 seconds
