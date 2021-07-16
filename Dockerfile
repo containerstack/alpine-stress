@@ -1,5 +1,5 @@
 FROM alpine:3.5
-MAINTAINER Remon Lam [remon@containerstack.io]
+LABEL maintainer="Remon Lam <remon@containerstack.io>"
 
 ENV STRESS_VERSION=1.0.4
 
