@@ -1,12 +1,14 @@
-FROM containerstack/alpine:3.5.0
+FROM alpine:3.5
 MAINTAINER Remon Lam [remon@containerstack.io]
 
 ENV STRESS_VERSION=1.0.4
 
+COPY stress-$STRESS_VERSION.tar.gz .
+
 RUN apk add --update bash g++ make curl && \
-  curl -o /tmp/stress-${STRESS_VERSION}.tgz https://people.seas.harvard.edu/~apw/stress/stress-${STRESS_VERSION}.tar.gz && \
-  cd /tmp && tar xvf stress-${STRESS_VERSION}.tgz && rm /tmp/stress-${STRESS_VERSION}.tgz && \
-  cd /tmp/stress-${STRESS_VERSION} && \
+  tar xzvf stress-$STRESS_VERSION.tar.gz && \
+  rm stress-$STRESS_VERSION.tar.gz && \
+  cd stress-${STRESS_VERSION} && \
   ./configure && make && make install && \
   apk del g++ make curl && \
   rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
